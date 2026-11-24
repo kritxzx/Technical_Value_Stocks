@@ -60,18 +60,18 @@ Evaluates uptrends ($\beta > 0$) across five weighted factors while penalizing n
 ```text
 .
 ├── backend/
-│   ├── main.py                      # FastAPI REST API + SPA static server
-│   ├── schemas.py                   # Pydantic response models
+│   ├── main.py
+│   ├── schemas.py
 │   └── core/
-│       ├── config.py                # Parameters, universe, and environment settings
-│       ├── data_processing.py       # Concurrent yfinance fetcher, tz-normalization, TTL cache
-│       ├── indicators.py            # EMA, RSI, MACD, ATR, Volume Profile (POC/HVN)
-│       ├── mathematical_models.py   # Log-linear channel, S/R, forecast, confluence setup
-│       ├── backtester.py            # Zero-lookahead walk-forward & portfolio backtester
-│       └── discord_bot.py           # NaN-safe Discord webhook notifier
-├── frontend/                        # React + TypeScript + Tailwind + Lightweight Charts
-├── main.py                          # CLI market scanner -> outputs/signals.csv
-├── outputs/signals.csv              # Latest ranked market scan
-├── Dockerfile                       # Multi-stage Node + Python production build
-├── render.yaml                      # Render Blueprint (Free tier + auto-deploy)
-└── .github/workflows/main.yml       # Scheduled weekday US market-close scan
+│       ├── config.py
+│       ├── data_processing.py
+│       ├── indicators.py
+│       ├── mathematical_models.py
+│       ├── backtester.py
+│       └── discord_bot.py
+├── frontend/
+├── main.py
+├── outputs/signals.csv
+├── Dockerfile
+├── render.yaml
+└── .github/workflows/main.yml
