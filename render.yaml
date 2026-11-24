@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: neon-quant-screener
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: CORS_ORIGINS
+        value: "*"
+      - key: DISCORD_WEBHOOK_URL
+        sync: false

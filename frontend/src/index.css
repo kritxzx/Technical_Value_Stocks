@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #07080d;
+    --bg-card: #0d1018;
+    --bg-elevated: #141927;
+    --neon-pink: #ff2e97;
+    --neon-pink-soft: rgba(255, 46, 151, 0.16);
+    --neon-cyan: #00f5d4;
+    --neon-violet: #a855f7;
+    --border-subtle: rgba(255, 255, 255, 0.08);
+  }
+
+  html,
+  body {
+    font-family: "Inter", "Noto Sans Thai", system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-primary);
+    color: #f1f5f9;
+    overflow-x: hidden;
+  }
+}
+
+.font-mono-num {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Subtle cyber-obsidian background mesh */
+.bg-neon-mesh {
+  background-color: #07080d;
+  background-image:
+    radial-gradient(ellipse 65% 45% at 12% 0%, rgba(255, 46, 151, 0.13), transparent 60%),
+    radial-gradient(ellipse 55% 40% at 88% 8%, rgba(168, 85, 247, 0.11), transparent 55%),
+    radial-gradient(ellipse 50% 45% at 50% 100%, rgba(0, 245, 212, 0.05), transparent 60%);
+}
+
+/* Glass / Neon Card */
+.neon-card {
+  background: linear-gradient(180deg, rgba(17, 21, 34, 0.92) 0%, rgba(11, 14, 22, 0.96) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(12px);
+}
+
+.neon-card-pink {
+  background: linear-gradient(180deg, rgba(24, 15, 28, 0.92) 0%, rgba(12, 14, 22, 0.96) 100%);
+  border: 1px solid rgba(255, 46, 151, 0.32);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.5),
+    0 0 24px rgba(255, 46, 151, 0.1);
+}
+
+.neon-glow-pink {
+  box-shadow: 0 0 20px rgba(255, 46, 151, 0.35), 0 0 4px rgba(255, 46, 151, 0.5);
+}
+
+.neon-text-pink {
+  color: #ff2e97;
+  text-shadow: 0 0 18px rgba(255, 46, 151, 0.45);
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #07080d;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 46, 151, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 46, 151, 0.6);
+}
+
+/* Safe area padding for iOS bottom nav */
+.pb-safe {
+  padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+}
